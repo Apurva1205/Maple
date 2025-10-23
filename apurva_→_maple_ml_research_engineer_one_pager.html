@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apurva Chavan → Maple — ML Research Engineer (Voice AI)</title>
+  <meta name="description" content="Tailored one‑pager for Maple ML Research Engineer: ASR · LLM · TTS · Agents · Knowledge Graphs. Includes current internship work on TTS." />
+  <style>
+    :root{
+      --bg:#06070c; --panel:#0e1118; --ink:#eef5ff; --muted:#a6b6cd; --ring:rgba(99,102,241,.28);
+      --brand1:#22d3ee; --brand2:#a78bfa; --brand3:#f59e0b; --chip:#121623;
+      --good:#34d399; --warn:#f59e0b; --hot:#fb7185;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Arial;line-height:1.6;color:var(--ink);
+      background:radial-gradient(900px 600px at 100% 0%, rgba(167,139,250,.12), transparent),
+                 radial-gradient(900px 600px at 0% 30%, rgba(34,211,238,.10), transparent),
+                 var(--bg)}
+    a{color:#7dd3fc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .logo{display:flex;align-items:center;gap:12px}
+    .mark{width:30px;height:30px;border-radius:10px;background:conic-gradient(from 180deg,var(--brand1),var(--brand2),var(--brand3),var(--brand1));
+      box-shadow:0 0 0 6px var(--ring)}
+    h1{font-size:18px;margin:0;font-weight:700;letter-spacing:.2px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{border:none;padding:10px 14px;border-radius:12px;color:#06070c;font-weight:700;cursor:pointer}
+    .btn:hover{transform:translateY(-2px)}
+    .btn.bl{background:linear-gradient(90deg,#22d3ee,#38bdf8);box-shadow:0 10px 24px rgba(56,189,248,.22)}
+    .btn.vi{background:linear-gradient(90deg,#a78bfa,#6366f1);box-shadow:0 10px 24px rgba(99,102,241,.22);color:#0b0c12}
+    .btn.go{background:linear-gradient(90deg,#f59e0b,#f97316);box-shadow:0 10px 24px rgba(251,146,60,.22)}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;padding:26px 0;align-items:center}
+    .hero h2{font-size:clamp(28px,4.2vw,46px);line-height:1.1;margin:6px 0 10px;
+      background:linear-gradient(90deg,#38bdf8,#a78bfa,#f59e0b);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{color:var(--muted);margin:0 0 10px}
+    .panel{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .chip{padding:8px 10px;background:var(--chip);border:1px solid rgba(255,255,255,.1);border-radius:999px;font-size:13px}
+
+    /* Section + Cards */
+    section{margin-top:34px}
+    .section-title{display:flex;align-items:center;gap:10px}
+    .section-title .dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#22d3ee,#a78bfa);box-shadow:0 0 14px #22d3ee,0 0 20px #a78bfa}
+    h3{font-size:18px;letter-spacing:.3px;margin:0 0 12px;background:linear-gradient(90deg,#22d3ee,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    .col-4{grid-column:span 4}.col-6{grid-column:span 6}.col-8{grid-column:span 8}.col-12{grid-column:span 12}
+    .card{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;position:relative}
+    .card::after{content:"";position:absolute;inset:0;border-radius:14px;padding:1px;background:linear-gradient(135deg,#a78bfa33,#22d3ee33);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite: xor;mask-composite: exclude}
+    .card h4{margin:2px 0 6px;font-size:16px}
+    .muted{color:var(--muted);font-size:14px}
+    ul.tight{margin:8px 0 0 18px;padding:0}
+    ul.tight li{margin:6px 0}
+
+    /* Rolebar */
+    .rolebar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:12px;padding:10px 12px;border-radius:12px;background:linear-gradient(90deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+      border:1px solid transparent;border-image:linear-gradient(90deg,#22d3ee,#a78bfa) 1}
+    .badge{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:6px 10px;font-size:13px}
+    .badge.good{background:linear-gradient(90deg,#34d399,#22d3ee);color:#081010}
+    .badge.warn{background:linear-gradient(90deg,#f59e0b,#fb923c);color:#120b06}
+
+    /* Copy boxes */
+    .copybox{display:grid;gap:8px}
+    .copybox textarea{width:100%;min-height:120px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:#0b0f16;color:var(--ink);padding:10px}
+    .copyrow{display:flex;justify-content:space-between;align-items:center}
+
+    /* Wave flourish */
+    .wave{height:8px;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f59e0b,#22d3ee);background-size:300% 100%;border-radius:6px;animation:wave 18s ease infinite}
+    @keyframes wave{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+    footer{margin:36px 0 12px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.col-8,.col-6,.col-4,.col-12{grid-column:span 12}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="mark" aria-hidden="true"></div>
+        <h1>Apurva Ravikar Chavan → <span style="opacity:.9">Maple</span></h1>
+      </div>
+      <nav class="cta">
+        <a class="btn bl" href="mailto:apurvachavan125@gmail.com">Email</a>
+        <a class="btn vi" href="https://www.linkedin.com/in/apurvachavan125/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn go" href="https://github.com/Apurva1205" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </header>
+
+    <div class="rolebar">
+      <span class="badge good">ML Research Engineer · Voice AI</span>
+      <span class="badge">NYC · In‑person</span>
+      <span class="badge">$120k–$250k</span>
+      <span class="badge">ASR · LLM · TTS · Agents</span>
+      <span class="badge warn">No visa sponsorship</span>
+      <span class="badge">Open to relocate to NYC</span>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h2>I build fast, robust voice agents — ASR + LLM + TTS — that thrive in the noisy real world.</h2>
+        <p>Currently interning on <strong>expressive, low‑latency TTS</strong>: controllable prosody, fast vocoding, and streaming synthesis that keeps conversations natural.</p>
+        <div class="chips">
+          <span class="chip">PyTorch · torchaudio · Triton</span>
+          <span class="chip">ASR: Conformer/Whisper‑family</span>
+          <span class="chip">TTS: FastPitch · VITS · HiFi‑GAN</span>
+          <span class="chip">LLMs · RAG · Agents · RLHF/RLAIF</span>
+          <span class="chip">CUDA graphs · torch.compile</span>
+          <span class="chip">WER/MOS/Latency dashboards</span>
+          <span class="chip">Knowledge Graphs · KG‑RAG</span>
+        </div>
+      </div>
+      <aside class="panel">
+        <h3 style="margin-top:0">Quick profile</h3>
+        <div class="muted">US‑based · Open to in‑person NYC · Hands‑on with speech + LLM systems</div>
+        <ul class="tight">
+          <li><strong>Infra:</strong> GPU training & optimized inference; batching/streaming; observability</li>
+          <li><strong>Data:</strong> augmentation, diarization/VAD, bias & accent coverage, eval harnesses</li>
+          <li><strong>Product:</strong> latency/quality trade‑offs, A/Bs, human‑in‑the‑loop improvement loops</li>
+        </ul>
+      </aside>
+    </section>
+
+    <div class="wave" aria-hidden="true"></div>
+
+    <!-- MATCH MATRIX -->
+    <section>
+      <div class="section-title"><span class="dot"></span><h3>JD → My Fit (Match Matrix)</h3></div>
+      <div class="grid">
+        <div class="card col-6">
+          <h4>Optimize ASR, LLMs, and TTS for noisy, diverse environments</h4>
+          <p class="muted">SpecAugment, background‑mix, acoustic domain adapters; prompt/graph‑guided decoding; expressive TTS.</p>
+          <ul class="tight"><li>Streaming ASR + partial hypotheses handling</li><li>LLM routing + retrieval; slot/intent extraction</li><li>TTS with controllable prosody (rate/pitch/energy)</li></ul>
+        </div>
+        <div class="card col-6">
+          <h4>Integrate into autonomous voice agents</h4>
+          <p class="muted">Task orchestration for scheduling, orders, and troubleshooting with safety/guardrails.</p>
+          <ul class="tight"><li>HITL review queues & rubric‑based evals</li><li>Tool use + calendar/ordering APIs</li><li>Error taxonomies & auto‑recovery paths</li></ul>
+        </div>
+        <div class="card col-6">
+          <h4>Knowledge graphs & adaptive ontologies</h4>
+          <p class="muted">Structure services/workflows/constraints so agents adapt instantly.</p>
+          <ul class="tight"><li>KG construction from CRM/menu/schedule data</li><li>Graph‑aware prompting & KG‑RAG</li><li>Consistency checks, freshness SLAs</li></ul>
+        </div>
+        <div class="card col-6">
+          <h4>Scale experiments → production</h4>
+          <p class="muted">Rapid prototyping, then harden: tests, tracing, cost/latency budgets.</p>
+          <ul class="tight"><li>GPU/TPU training & quantized inference</li><li>p95/p99 dashboards; canaries & rollbacks</li><li>Edge/desktop agents where needed</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURRENT INTERNSHIP: TTS -->
+    <section>
+      <div class="section-title"><span class="dot"></span><h3>What I’m building now (Internship) — Expressive, Low‑Latency TTS</h3></div>
+      <div class="grid">
+        <div class="card col-6">
+          <h4>Modeling</h4>
+          <ul class="tight">
+            <li>FastPitch/VITS stack with <strong>duration & energy predictors</strong> for natural rhythm and emphasis.</li>
+            <li>Speaker embeddings + few‑shot adaptation for consistent brand voices.</li>
+            <li>SSML‑style controls (<em>rate, pitch, emphasis, breaks</em>) exposed in the API.</li>
+          </ul>
+        </div>
+        <div class="card col-6">
+          <h4>Performance</h4>
+          <ul class="tight">
+            <li>Streaming synthesis via <strong>chunked vocoder windows</strong> for immediate playback.</li>
+            <li><code>torch.compile</code> & CUDA Graphs to trim kernel launch overhead.</li>
+            <li>Batching/caching for repeat prompts; NUMA‑aware CPU offloads for preprocessing.</li>
+          </ul>
+        </div>
+        <div class="card col-6">
+          <h4>Quality & Safety</h4>
+          <ul class="tight">
+            <li>Listening panels + MOS‑lite rubric; objective F0 RMSE / MCD tracking.</li>
+            <li>Pronunciation dictionary & grapheme‑to‑phoneme fallbacks; locale/voice constraints.</li>
+            <li>Latency/quality guardrails with canary prompts and regression alarms.</li>
+          </ul>
+        </div>
+        <div class="card col-6">
+          <h4>Integration</h4>
+          <ul class="tight">
+            <li>WebSocket endpoints for <strong>ASR → LLM → TTS</strong> full‑duplex conversations.</li>
+            <li>Back‑pressure control to keep dialogue turn‑taking natural.</li>
+            <li>Observability: per‑turn traces with ASR WER, TTS latency, user satisfaction tags.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS / EVIDENCE -->
+    <section>
+      <div class="section-title"><span class="dot"></span><h3>Evidence & recent work</h3></div>
+      <div class="grid">
+        <article class="card col-6">
+          <h4>Speech Agent Prototype</h4>
+          <p class="muted">Small end‑to‑end pipeline (VAD → streaming ASR → LLM planner → TTS) with telemetry and error taxonomy.</p>
+          <ul class="tight"><li>Focus: latency, barge‑in handling, and repair strategies</li></ul>
+          <p><a href="https://github.com/Apurva1205" target="_blank" rel="noopener">Repos & notes ↗</a></p>
+        </article>
+        <article class="card col-6">
+          <h4>AI Resume Enhancer (IR + Scoring)</h4>
+          <p class="muted">Embeddings + ranking with evaluation harnesses — shows my approach to data quality & product metrics.</p>
+          <p><a href="https://github.com/Apurva1205/AI-RESUME-ENHANCER" target="_blank" rel="noopener">View repository ↗</a></p>
+        </article>
+        <article class="card col-6">
+          <h4>LLMs in Finance</h4>
+          <p class="muted">RAG patterns + rubric evaluations with guardrail canaries and prompt logging.</p>
+          <p><a href="https://github.com/Apurva1205/LLMs-in-Finance" target="_blank" rel="noopener">View repository ↗</a></p>
+        </article>
+        <article class="card col-6">
+          <h4>Time‑Series Forecasting</h4>
+          <p class="muted">LSTM/ARIMA with anomaly alerts and productionized pipelines; strong discipline around dashboards & SLAs.</p>
+          <p><a href="https://github.com/Apurva1205/Time-Series-Forecasting-For-Energy-Consumption" target="_blank" rel="noopener">View repository ↗</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2‑WEEK IMPACT PLAN FOR MAPLE -->
+    <section>
+      <div class="section-title"><span class="dot"></span><h3>How I’d create impact in the first 2 weeks</h3></div>
+      <div class="grid">
+        <div class="card col-8">
+          <ul class="tight">
+            <li><strong>Day 1–2:</strong> Instrument current voice stack (ASR/TTS/LLM) with tracing; define <em>WER, CER, MOS‑lite, p95 latency</em> SLOs.</li>
+            <li><strong>Day 3–4:</strong> Domain adaptation: noise/room/phone codecs; streaming decode tweaks; barge‑in & interruption tests.</li>
+            <li><strong>Day 5–7:</strong> TTS expressiveness pass (prosody controls + pronunciation dictionary); set up listening panel workflow.</li>
+            <li><strong>Day 8–10:</strong> Knowledge‑graph extraction from real customer data (menus/services/hours), wire into agent planner.</li>
+            <li><strong>Day 11–14:</strong> A/B an end‑to‑end improvement (e.g., faster turn‑taking) and ship with rollback + canaries.</li>
+          </ul>
+        </div>
+        <div class="card col-4">
+          <h4 style="margin-top:0">Working style</h4>
+          <p class="muted">Ship → measure → iterate. Small RFCs, clear trade‑offs, and production‑grade hygiene from day one.</p>
+          <div class="chips">
+            <span class="chip">Telemetry first</span>
+            <span class="chip">SLOs & on‑call</span>
+            <span class="chip">Tidy data</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IDEA PITCH -->
+    <section>
+      <div class="card">
+        <div class="section-title"><span class="dot"></span><h3>Idea Pitch: “Voice Agent Reliability Sprint” (3–4 weeks)</h3></div>
+        <div class="grid">
+          <div class="col-6">
+            <ul class="tight">
+              <li><strong>Problem:</strong> Voice agents stall under noise/accents; prosody sounds robotic; turn‑taking lags.</li>
+              <li><strong>Solution:</strong> A focused reliability sprint: streaming ASR with partials, KG‑guided intent resolution, and expressive TTS with SSML controls.
+                Services ship with observability and cost/latency budgets.</li>
+              <li><strong>Deliverables:</strong> eval harness (WER/MOS/latency), KG‑RAG planner, TTS API with prosody, WebSocket E2E stack with traces.</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul class="tight">
+              <li><strong>Targets:</strong> +X% task completion (A/B), −Y% average turn latency, WER ↓ on accented speech, MOS‑lite ↑ for clarity/naturalness.</li>
+              <li><strong>Risks & mitigations:</strong> data sparsity (augment/collect), drift (canaries), cost spikes (routing/quantization), regressions (rollbacks).</li>
+              <li><strong>Quick ask:</strong> Sample traces/audio, current evals, and a 20‑min kickoff.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pitch" style="margin-top:12px">
+          <p class="muted" style="font-size:15px;line-height:1.7">I propose a focused “Voice Agent Reliability Sprint” for Maple: streaming ASR with partial hypotheses, KG‑guided intent resolution, and expressive, low‑latency TTS with SSML‑style controls. We’ll ship an end‑to‑end WebSocket stack (ASR → LLM planner → TTS) with tracing, SLOs for WER/MOS/latency, and cost/latency budgets. Outcome: faster turns, better robustness to noise/accents, and more natural prosody in real customer calls.</p>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY MAPLE BLURB -->
+    <section>
+      <div class="card">
+        <div class="section-title"><span class="dot"></span><h3>“Why Maple” </h3></div>
+        <div class="blurb">
+          <p class="muted" style="font-size:15px;line-height:1.7">Maple’s mission — voice agents that truly understand small businesses — matches my focus on robust ASR, expressive TTS, and graph‑aware planning. I’ve been interning on low‑latency, controllable TTS and love building end‑to‑end systems (ASR → LLM → TTS) with real‑world constraints. I move quickly from prototype to production, with clear SLOs (WER/MOS/latency) and the tooling to keep quality high as we scale.</p>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+      <div class="card">
+        <h3 style="margin:0 0 6px">Let’s talk</h3>
+        <p class="muted" style="margin:0 0 10px">15‑minute chat? I can walk through my current TTS work and a plan to boost reliability & speed in Maple’s voice agents.</p>
+        <div class="cta">
+          <a class="btn bl" href="mailto:apurvachavan125@gmail.com?subject=Maple%20—%2015‑min%20chat">Email Apurva</a>
+          <a class="btn vi" href="https://www.linkedin.com/in/apurvachavan125/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+          <a class="btn go" href="https://github.com/Apurva1205" target="_blank" rel="noopener">Browse GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Apurva Ravikar Chavan</div>
+      <div class="muted">Built with plain HTML/CSS</div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  <\/script>
+</body>
+</html>
